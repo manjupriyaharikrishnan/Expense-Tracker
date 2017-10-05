@@ -1,0 +1,90 @@
+<!-- Top Navigation (HOME & BACK) button starts here -->
+<div class="col-lg-12 viewNavBtn">
+    <a href="#home" class="btn btn-default navButton viewButton"> Home </a>
+    <a href="javascript: window.history.back();" class="btn btn-default pull-right navButton viewButton"> Back </a>
+</div>
+<!-- Top Navigation (HOME & BACK) button ends here -->
+
+<!-- Date Selection block starts here -->
+<div class="col-sm-12 form-group formDiv zprop1" ng-init="init()">
+  
+  <!-- year selection block starts here -->
+ <div class="col-sm-2 forms">
+    <select class="form-control year" ng-model="year" name="yearValue" ng-change="getDate()">
+        <option value="" default selected >Year</option>
+        <option value={{y}} ng-repeat="y in yearOption" >{{ y }}</option>
+    </select>
+ </div>
+  <!-- year selection block ends here -->
+
+  <!-- Month selection block starts here -->
+ <div class="col-sm-2 forms">
+  <select class="form-control year" ng-model="month" ng-focus=getMonth() ng-change=getDate() ng-disabled="(year==='')">
+      <option value="" default  selected >Month</option>
+       <option value={{m}} ng-repeat="m in monthOption" >{{ m }}</option> 
+  </select>
+</div>
+  <!-- Month selection block ends here -->
+
+  <!-- Date selection block start here -->
+  <div class="col-sm-2 forms">
+    <select class="form-control year" ng-model="date" ng-focus=getDate() 
+      ng-disabled="(year==='') || (month==='')">
+        <option value="" default selected >Date</option>
+        <option value={{d}} ng-repeat="d in dateOption" >{{ d }}</option>
+    </select>
+  </div>
+  <!-- Date selection block ends here -->
+
+  <!-- FindExpense(GO) block starts here -->
+  <div class="col-lg-6 gobtn">
+	     <a href="javascript:void(0)"
+       class="form-control btn btn-default navButton go pull-right" 
+       ng-click="findExpense()" 
+       ng-disabled="(year==='')|| (year===undefined)"> Go</a>
+  </div>
+  <!-- FindExpense(GO) block ends here -->
+
+</div>
+<!-- Date Selection block starts here -->
+
+<!-- Detailed Report of Date starts here -->
+<div class="col-lg-12">
+	    <div class="col-md-2"> <h4>Detailed Report </h4></div>  
+      <div class="col-md-2" ng-model="dateFormat"> 
+          <h5 class="bolder"> {{ dateFormat}} </h5>
+      </div>
+</div>
+<!-- Detailed Report of Date ends here -->
+
+<!-- Expense View Table section starts here -->
+<div class="col-lg-12">
+
+    <!-- expense Table starts here -->
+    <div class="zprop">
+        <table class=" table table-bordered table-hover tablesorter category_table ">  
+            <tbody>
+                <tr ng-repeat="expense in expenses">
+	                 <td> {{ expense.item }}  </td>
+	                 <td> {{ expense.cost | currency:"RS "}} </td>
+                </tr>
+
+                <tr ng-show="!expenses.length;">
+                    <td> no data </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!--expense Table ends here -->
+
+    <!-- View Strategy section starts here  -->
+    <div class="row viewStrategy">
+        <div class="col-lg-12 ">
+            <a href="javascript:void(0)" class="btn btn-default btn-lg navButton pull-right" ng-click="viewStats()" ng-disabled="!expenses.length"> View Strategy chart </a> 
+        </div>
+    </div>
+    <!-- View Strategy section ends here  -->
+
+</div>
+<!-- Expense View Table section ends here -->

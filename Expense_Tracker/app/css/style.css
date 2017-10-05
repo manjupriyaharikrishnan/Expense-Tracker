@@ -1,0 +1,212 @@
+/* home page starts here */
+.pageHolder {
+	background-color: #d9eeff;
+	border: solid 5px #0c6494;
+	margin:20px 0;
+	min-width: 320px;
+}
+.pageHolder h1 {
+	margin: 2em 0;
+	text-align: center;
+	text-transform: capitalize;
+}
+.pageHolder h1 span {
+	text-transform: lowercase;
+}
+.NavButtonGroup {
+	margin: 7% 0;
+	text-align: center;
+}
+.navButton, .topNavButton {
+	width: 11em;
+	margin: 0.8em 0;
+	color: #0b6fab;
+	font-weight: bolder;
+	background: linear-gradient(to bottom, #ffffff 0, #99cdf5 80%);
+	text-transform: capitalize;
+}
+.navButton:hover, .navButton:focus, .navButton:active, .topNavButton:hover, .topNavButton:focus, .topNavButton:active {
+	background: linear-gradient(to bottom, #ffffff 0, #77C1FA  80%);
+	color: #0b6fab;
+}
+.clear {
+	clear: both;
+}
+
+/* home page ends here */
+/* add expense starts here */
+.topNavButton {
+	width: 7em;
+}
+.pageHolder h2, .pageHolder h3, .pageHolder h4 {
+	text-transform: capitalize;
+	font-weight: bolder;
+}
+.pageHolder h2::after, .pageHolder h3::after, .pageHolder h4::after {
+	content: ":";
+	display: inline;
+}
+.myDate {	
+	text-align: center;
+	border-radius:20px;
+	outline: none;
+	width:120px;
+}
+.todayButton {
+	margin: 0 1.5em;
+}
+input[type='text'], input[type='date'], .expenseCat {
+	border: solid 2px black;
+	text-transform: capitalize;
+	font-weight: bolder;
+}
+.expenseCat{
+	-moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button; 
+    appearance: button;
+	background:url("../images/dropDown.png") no-repeat right center;
+	background-color: #ffffff;
+}
+.error {
+	display: none;
+}
+.errorshow {
+	display: block;
+	color: red;
+}
+.highlightError {
+	border-color: red !important;
+}
+.category_table, td, tr, tbody {
+	border: 2px solid black !important;
+	font-weight: bold;
+	background-color: white;
+	text-transform: capitalize;
+}
+td:hover span.badge {
+	background-color: rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+	color:white;
+}
+td:hover span.badge,span.badge:hover {
+	background-color: rgba(0, 0, 0, 1.0);
+	color:white;
+	cursor:pointer;
+}
+span.badgeButton {
+	width: 26%;
+}
+.displayCost {
+	width: 85%;
+	display: inline-block;
+}
+.editCost {
+	width: 45%;
+	display: inline-block;
+}
+.date_section {
+	z-index: 4;
+}
+.basic_section, .other_section {
+	z-index: 3;
+}
+.table_section {
+	z-index: 2;
+}
+
+/* add expense ends here */
+/* View Expense page styles */
+
+.viewNavBtn {
+	margin: 2em 0;
+}
+.viewButton {
+	width: 7em;
+}
+.year {
+	width: 10em;
+	border: 2px solid black;
+	border-radius: 4px;
+	xmargin-bottom: 0.5em;
+}
+.go {
+	width: 5em;
+	margin: 0;
+}
+.report {
+	display: inline-block;
+}
+.category_table, tr, td, tbody {
+	border: 2px solid black;
+	background-color: white;
+	font-weight: bold;
+}
+.viewStrategy {
+	margin-bottom: 1em;
+	margin-right: 0.1em;
+}
+.formDiv {
+	padding-left: 0px;
+	padding-right: 0;
+}
+.bolder {
+	font-weight: bolder;
+}
+svg#chart {
+	width: 60%;
+	float: left;
+}
+svg.legend {
+	width: 39%;
+	float: left;
+}
+@media all and (max-width:990px) {
+	.forms {
+		margin-right: 2em;
+		margin-bottom: 0.7em;
+	}
+	.gobtn {
+		margin-right: 8em;
+		margin-bottom: 1em;
+	}
+}
+
+/* View Expense page styles */
+
+/* Confirm Modal Window starts here */
+.modal-content{
+	border: solid 3px #0c6494;
+	background-color: #d9eeff; 
+	color:#0c6494;
+	font-weight: bold;
+	
+}
+.modal-content .navButton{
+	margin:0;
+}
+.modal-content:first-letter,.modal-body:first-letter{
+	text-transform: capitalize;
+}
+.modal-header,.modal-body,.modal-footer {
+	border-bottom:solid 1px #0c6494;
+}
+/* Confirm Modal Window ends here */
+select::-ms-expand {
+    display: none;
+}  
+.year,.month,.date {
+	 -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button; 
+    appearance: button;
+    background:url("../images/dropDown.png") no-repeat right center;
+	background-color: #ffffff;
+}
+
+	
+
+
+

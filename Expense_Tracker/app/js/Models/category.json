@@ -1,0 +1,11 @@
+{
+    "TravelCategory":[
+    "travel",
+	"grocery",
+	"music",
+	"medical",
+	"fun",
+	"clothing",
+    "education"
+	]
+}

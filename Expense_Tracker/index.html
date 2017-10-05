@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" ng-app="expensetracker">
+	<head>
+		<title>Expense Tracker</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- css include section  starts here -->
+		<link rel="stylesheet" type="text/css" media="all" href="app/css/reset.css" />
+		<link rel="stylesheet" href="app/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="app/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="app/css/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="app/css/style.css" />
+		<!-- css include section ends here-->
+
+		<!--library include section starts here -->
+		<script src="app/js/Vendors/Jquery/jquery.min.js"></script>
+		<script src="app/js/Vendors/Jquery/jquery-ui.js"></script>
+		<script src="app/js/Vendors/Angular/angular.min.js"></script>
+		<script src="app/js/Vendors/Angular/angular-route.min.js"></script>
+		<script src="app/js/Vendors/Angular/ui-bootstrap-tpls.min.js"></script>
+		<script src="app/js/Vendors/Bootstrap/bootstrap.min.js"></script>
+		<script src="app/js/Vendors/D3/d3.v2.js"></script>
+		<!-- library include section ends here-->
+
+		<!--app js section starts here -->
+		<script src="app/js/app.js"></script>
+		<script src="app/js/Controllers/Controller.js"></script>
+		<script src="app/js/Services/Service.js"></script>
+		<script src="app/js/Directives/clickToEdit.js"></script>
+		<!-- app js section ends here-->
+
+	</head>
+	<body>
+		<!-- container starts here -->
+		<div class="container-fluid">
+				
+				<!-- page Holder starts here -->
+				<section class="col-lg-12 pageHolder">
+
+				<div ng-view>  </div>
+
+				</section>
+				<!-- page Holder ends here -->
+		</div>
+		<!-- container ends here -->
+	</body>
+</html>
+

@@ -1,0 +1,12 @@
+<div>
+<div ng-dblclick="button=true; backup()"  ng-hide="(button===true)"> 
+	<span class="displayCost"> {{data | currency:"RS " }} </span> 
+    <span class="badge" ng-click="deletedata()"> x </span> 
+</div>
+<div ng-show="(button===true)"> 
+	<input class="editCost" type="text" ng-model=data value={{data}} /> 
+	<span class="badge bageButton saveButton" ng-click= "button=false; save()"> save </span>
+	<span class="divider"></span>
+	<span class="badge bageButton" ng-click= "button=false; cancel()"> cancel </span>
+</div> 
+</div>
